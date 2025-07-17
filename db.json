@@ -1,0 +1,72 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Apple iPhone 15",
+      "price": 999,
+      "description": "Latest model with amazing features",
+      "image": "https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY218_.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Apple Iphone 15 Pro",
+      "price": 899,
+      "description": "Latest model with amazing new features",
+      "image": "https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY218_.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Sony headphones",
+      "price": 199,
+      "description": " with noise cancelling and other features",
+      "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY218_.jpg"
+    },
+    {
+  "id": 4,
+  "title": "Sony headphones",
+  "price": 149,
+  "description": "with noise cancelling and other features",
+  "image": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY218_.jpg"
+    },
+  
+ {
+      "id": 5,
+      "title": "Iphone 14 ",
+      "price": 749,
+      "description": "New release with new features",
+      "image": "https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY218_.jpg"
+    },
+    {
+      "id": 6,
+      "title": "sony headphones",
+      "price": 89,
+      "description": "with noise cancelling and other features",
+      "image":"https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY218_.jpg"
+  
+    },
+    {
+      "id": 7,
+      "title": "sony Headphones",
+      "price": 59,
+      "description": "",
+      "image":"https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY218_.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Sony Headphones",
+      "price": 399,
+      "description": "with noise cancelling and other features",
+      "image":"https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UY218_.jpg"
+    },
+  
+     {
+      "id": 9,
+      "title": "I phone 14 pro max",
+      "price": 399,
+      "description": " New release with newfeatures",
+      "image": "https://m.media-amazon.com/images/I/81CgtwSII3L._AC_UY218_.jpg"
+    }
+  ]
+
+  
+}
