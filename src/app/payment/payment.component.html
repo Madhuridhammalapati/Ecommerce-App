@@ -1,4 +1,51 @@
-<div class="container mt-4 text-center">
+
+<div class="container text-center mt-4">
+   <div *ngIf="!paymentSuccuess">
+  <div class="row justify-content-center">
+    <h3 class="text-center mt-4">Enter Card Details</h3>
+      <form #cardForm="ngForm" (ngSubmit)="onSubmit()" class="card w-50 shadow-sm">
+     <div>
+       <label for="cardNumber" class="from-label"></label>
+       <input type="text" placeholder=" card number" name="CardNUmber" class="form-control" [(ngModel)]="payment.cardNumber" #cardNumber="ngModel" required   pattern="^[0-9]{16}$" required>
+       <p *ngIf="cardNumber.touched && cardNumber.errors?.['required']" class="text-danger">*Please enter card Number</p>
+       <p *ngIf="cardNumber.touched && cardNumber.errors?.['pattern']" class="text-danger">*Please enter a valid card number(16 digits)</p>
+     </div>
+      <div>
+       <label for="nameOnCard" class="from-label"></label>
+       <input type="text" class="form-control" placeholder="Name on card " name="nameOnCard" [(ngModel)]="payment.nameOnCard"  #nameOnCard="ngModel" required>
+       <p *ngIf="nameOnCard.touched&& nameOnCard.invalid" class="text-danger">*Please enter name on the Card</p>
+     </div>
+       <div>
+         <label for="CVV" class="from-label"></label>
+        <input type="text" class="form-control" placeholder="Security code" name="CVV" [(ngModel)]="payment.cvv" #CVV="ngModel" required pattern="^[0-9]${3}">
+        <p *ngIf="CVV.touched && CVV.errors?.['required']" class="text-danger">*Please enter the CVV</p>
+        <p *ngIf="CVV.touched && CVV.errors?.['pattern']" class="text-danger"> *Please enter correct CVV(3 digits)</p>
+      </div>
+        <div>
+        <label for="pinCode" class="from-label"></label>
+        <input type="text" class="form-control" placeholder=" zipcode" name="pinCode" [(ngModel)]="payment.pinCode" #pinCode="ngModel" required pattern="^[0-9]${5,6}">
+        <p *ngIf="pinCode.touched && pinCode.errors?.['required']" class="text-danger">*Please enter the zipCode</p>
+        <p *ngIf="pinCode.touched && pinCode.errors?.['pattern']" class="text-danger">* Please enter the correct pincode</p>
+      </div>
+      <div>
+         <label for="email" class="from-label"></label>
+         <input type="text" class="form-control" placeholder="Email" name="email" [(ngModel)]="payment.email" #email="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+         <p *ngIf="email.touched && email.errors?.['required']" class="text-danger">*Please enter email </p>
+         <p *ngIf="email.touched&& email.errors?.['pattern']" class="text-danger">*Please enter valid email</p>
+      </div>
+      <div>
+         <label for="phoneNumber" class="from-label"></label>
+         <input type="text" class="form-control" placeholder="Phone number" name="phoneNumber" [(ngModel)]="payment.phoneNumber" #phoneNumber="ngModel" required pattern="^[0-9]{10}">
+         <p *ngIf="phoneNumber.touched && phoneNumber.errors?.['required']" class="text-danger">*Please enter phoneNumber</p>
+         <p *ngIf="phoneNumber.touched && phoneNumber.errors?.['pattern']" class="text-danger">*Please enter a valid phone number</p>
+      </div>
+        <button (click)="onSubmit()" class="btn btn-primary mt-4 mb-4 mx-auto" [disabled]="!cardForm.valid">Confirm Payment </button>
+    </form>
+  </div>
+</div>
+</div>
+
+<div class="container mt-4 text-center" *ngIf="paymentSuccuess">
   <h2>Payment Successful! ✅</h2>
   <p>Thank you, {{ orderData?.name }}! Your order is confirmed.</p>
   <p>A confirmation email will be sent to: {{ orderData?.email }}</p>

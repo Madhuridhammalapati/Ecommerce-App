@@ -17,8 +17,8 @@ export class CartService {
  
   constructor() {}
    private updateCartState() {
-    this.cartItemsSubject.next(this.cartItems); // broadcast cart updates
-    this.cartCount.next(this.getTotalQuantity()); // update total quantity
+    this.cartItemsSubject.next(this.cartItems); 
+    this.cartCount.next(this.getTotalQuantity()); 
   }
   addToCart(product: Product) {
     const index = this.cartItems.findIndex(item => item.product.id === product.id);

@@ -12,9 +12,7 @@ private apiUrl='http://localhost:3000/products';
   getProducts():Observable<Product[]>{
     return this.http.get<Product[]>(this.apiUrl);
   }
-  
-
-  getProductById(id:number):Observable<Product>{
+    getProductById(id:number):Observable<Product>{
     return this.http.get<Product>(`${this.apiUrl}/${id}`);
   }
 

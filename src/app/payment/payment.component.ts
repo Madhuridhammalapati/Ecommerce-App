@@ -10,6 +10,14 @@ export class PaymentComponent implements OnInit {
   constructor(private CartService:CartService){}
 paymentSuccuess=false;
 orderData:any;
+payment={
+  cardNumber:'',
+  nameOnCard:'',
+  email:'',
+  cvv:'',
+  pinCode:'',
+  phoneNumber:'',
+}
 ngOnInit(): void {
   const data = localStorage.getItem('orderData');
     if (data) {
@@ -17,7 +25,7 @@ ngOnInit(): void {
     }
     this.CartService.clearCart();
 }
-payment(){
-  this.paymentSuccuess=true;
+onSubmit(){
+this.paymentSuccuess=true;
 }
 }
